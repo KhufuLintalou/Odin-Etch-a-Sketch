@@ -28,13 +28,17 @@ gridSizeButton.addEventListener("click", function() {
     });
 
     let gridSize = userInput * userInput;
-    for (i = 0; i < gridSize; i++) {
-        let square = document.createElement("div");
-        square.classList.add("square");
-        container.appendChild(square);
-        square.addEventListener("mouseover", function() {
-            square.style.backgroundColor = "black";
-        })
-    }
+    if (gridSize <= 10000) {
+            for (i = 0; i < gridSize; i++) {
+                let i = document.createElement("div");
+                i.classList.add("square");
+                i.style.height = `${7680 / gridSize}px`;
+                i.style.width = `${7680 / gridSize}px`;
+                container.appendChild(i);
+                i.addEventListener("mouseover", function() {
+                    i.style.backgroundColor = "black";
+                })
+            }
+        }
 })
 
