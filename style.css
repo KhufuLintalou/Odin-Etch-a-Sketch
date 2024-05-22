@@ -1,18 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
 .container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    max-width: 530px;
+    flex-flow: row wrap;
+    width: 400px;
+    height: 400px;
     margin-top: 50px;
 }
 
 .square {
     border: 1px solid black;
-    height: 30px;
-    width: 30px;
-    min-height: 4px;
-    min-width: 4px;
-    flex: auto;
+    height: 25px;
+    width: 25px;
 }
 
 .grid {
@@ -27,4 +29,8 @@ h1 {
 .button-container {
     display: flex;
     justify-content: center;
+}
+
+.grid-size {
+    cursor: pointer;
 }
