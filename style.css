@@ -10,6 +10,9 @@
     border: 1px solid black;
     height: 30px;
     width: 30px;
+    min-height: 4px;
+    min-width: 4px;
+    flex: auto;
 }
 
 .grid {
