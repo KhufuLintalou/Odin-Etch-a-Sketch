@@ -46,13 +46,23 @@ gridSizeButton.addEventListener("click", function() {
 
 let randomRGB = document.querySelector(".random-color");
 randomRGB.addEventListener("click", function() {
-        let allSquares = document.querySelectorAll(".square");
-        allSquares.forEach(element => {
-            element.addEventListener("mouseover", function() {
-                let randomRed = Math.floor(Math.random() * 256);
-                let randomGreen =  Math.floor(Math.random() * 256);
-                let randomBlue = Math.floor(Math.random() * 256);
-                element.style.backgroundColor = "rgb(" + randomRed + "," + randomGreen + "," + randomBlue + ")";
-            })
+    let allSquares = document.querySelectorAll(".square");
+    allSquares.forEach(element => {
+        element.addEventListener("mouseover", function() {
+            let randomRed = Math.floor(Math.random() * 256);
+            let randomGreen =  Math.floor(Math.random() * 256);
+            let randomBlue = Math.floor(Math.random() * 256);
+            element.style.backgroundColor = "rgb(" + randomRed + "," + randomGreen + "," + randomBlue + ")";
         })
+    })
+})
+
+let blackSquare = document.querySelector(".black-color");
+blackSquare.addEventListener("click", function() {
+    let allSquares = document.querySelectorAll(".square");
+    allSquares.forEach(element => {
+        element.addEventListener("mouseover", function() {
+            element.style.backgroundColor = "black";
+        })
+    })
 })

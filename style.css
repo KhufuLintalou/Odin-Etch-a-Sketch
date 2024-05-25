@@ -33,6 +33,7 @@ h1 {
 }
 
 .grid-size,
-.random-color {
+.random-color,
+.black-color {
     cursor: pointer;
 }
