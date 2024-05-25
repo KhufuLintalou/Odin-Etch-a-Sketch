@@ -17,6 +17,7 @@ gridSizeButton.addEventListener("click", function() {
         alert("Only numbers between 2 and 100!");
         userInput = 16;
     } else if (userInput <= 1) {
+        alert("Only numbers between 2 and 100!");
         userInput = 16;
     } else if (isNaN(userInput)) {
         alert("That's not a number!");
@@ -29,15 +30,15 @@ gridSizeButton.addEventListener("click", function() {
     });
 
     let gridSize = userInput * userInput;
-    if (gridSize <= 10000) {
-        for (i = 0; i < gridSize; i++) {
-          let i = document.createElement("div");
-          i.classList.add("square");
-          i.style.height = `${400 / userInput}px`;
-          i.style.width = `${400 / userInput}px`;
-          container.appendChild(i);
-          i.addEventListener("mouseover", function() {
-            i.style.backgroundColor = "black";
+    if (userInput <= 100) {
+        for (square = 0; square < gridSize; square++) {
+          let square = document.createElement("div");
+          square.classList.add("square");
+          square.style.height = `${400 / userInput}px`;
+          square.style.width = `${400 / userInput}px`;
+          container.appendChild(square);
+          square.addEventListener("mouseover", function() {
+            square.style.backgroundColor = "black";
           })
         }
     }
